@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+:root {
+  --black: #121212;
+  --white: #f1f1f1;
+  --blue: #3c49b2;
+  --brown: #9f8465;
+  --fontMain: "Merriweather", serif;
+}
+body {
+  background-color: var(--brown);
+  font-family: var(--fontMain);
+}
+.wrapper {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+}
+.quoteContainer {
+  height: 90vh;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid black;
+}
+h1 {
+  font-size: 5rem;
+}
+h3 {
+  font-size: 2rem;
+}
