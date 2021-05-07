@@ -3,16 +3,19 @@
 const creativityHover = document.getElementById("creativityHover");
 const moreHover = document.getElementById("moreHover");
 
-creativityHover.addEventListener("click", function (e) {
-  e.preventDefault();
-  party.confetti(e);
+party.resolvableShapes["heart"] = `<img src="heart.svg" class="heart"/>`;
+
+creativityHover.addEventListener("mouseenter", function (e) {
+  //   e.preventDefault();
+  party.confetti(e, {
+    shapes: ["square", "circle"],
+    count: party.variation.range(90, 100),
+  });
 });
-moreHover.addEventListener("click", function (e) {
+moreHover.addEventListener("mouseover", function (e) {
   e.preventDefault();
-  party.sparkles(e);
-});
-document.querySelector(".button").addEventListener("click", function (e) {
-  party.confetti(this, {
-    count: party.variation.range(20, 40),
+  party.confetti(e, {
+    shapes: ["heart"],
+    count: party.variation.range(35, 40),
   });
 });
