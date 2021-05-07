@@ -1,15 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
+html {
+  font-size: 18px;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: block;
+}
+
 :root {
   --black: #121212;
   --white: #f1f1f1;
   --blue: #3c49b2;
-  --brown: #9f8465;
+  --blueDark: #2d377e;
+  --brownDark: #9f8465;
+  --brownLight: #c5a98a;
   --fontMain: "Merriweather", serif;
 }
 body {
-  background-color: var(--brown);
+  background-color: var(--brownDark);
   font-family: var(--fontMain);
+  color: var(--black);
 }
 .wrapper {
   max-width: 1220px;
@@ -17,7 +37,7 @@ body {
   margin: 0 auto;
 }
 .quoteContainer {
-  height: 90vh;
+  height: 85vh;
   width: 90vw;
   margin: 0 auto;
   padding: 30px;
@@ -25,11 +45,49 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid black;
+  position: relative;
 }
 h1 {
   font-size: 5rem;
+  line-height: 6.7rem;
 }
 h3 {
   font-size: 2rem;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+p {
+  padding-right: 40px;
+}
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover,
+a:focus {
+  color: var(--blueDark);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.highlight {
+  cursor: pointer;
+  background-color: var(--brownLight);
+  background: linear-gradient(
+    to bottom,
+    var(--brownLight) 0%,
+    var(--brownLight) 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  text-decoration: none;
+  transition: background-size 0.2s;
+}
+.highlight:hover {
+  background-size: 4px 105px;
 }
