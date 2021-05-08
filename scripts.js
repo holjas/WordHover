@@ -4,10 +4,8 @@ partyApp.screenSize = () => {
   const screenSize = window.innerWidth;
   if (screenSize > 900) {
     partyApp.largeScreen();
-    console.log("LARGE");
   } else {
     partyApp.smallScreen();
-    console.log("smallscreen");
   }
 };
 
