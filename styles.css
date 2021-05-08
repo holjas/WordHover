@@ -89,3 +89,28 @@ a:focus {
 .heart {
   width: 40px;
 }
+/* media queries */
+
+@media (max-width: 800px) {
+  .quoteContainer {
+    height: fit-content;
+    width: fit-content;
+  }
+  h1 {
+    font-size: 4rem;
+    line-height: 5.7rem;
+    margin: 20px 0;
+  }
+  h3 {
+    margin: 20px 0;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 3.3rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
